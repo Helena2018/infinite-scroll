@@ -42,5 +42,16 @@ h1 {
 
 .image-container img {
   width: 100%;
-  margin: 5px;
+  margin-top: 5px;
+}
+
+/* Media Query: Smartphone  */
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 18px;
+  }
+
+  .image-container {
+    margin: 10px;
+  }
 }
