@@ -8,8 +8,9 @@ let photosArray = [];
 // const apiKey = 'ctMG8haf-qRPxQBBq7TUoMjFlSsyVm8D_PWD0iPA718'
 // const apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${count}`
 
+// Check if all images were loaded
 function imageLoade() {
-
+  console.log('image loaded')
 }
 
 // Helper Function to Set Attributes on DOM Elements
