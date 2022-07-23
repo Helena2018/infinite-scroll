@@ -1,6 +1,9 @@
 const imageContainer = document.getElementById('image-container')
 const loader = document.getElementById('loader')
 
+let ready = false;
+let imagesLoaded = 0;
+let totalImages = 0;
 let photosArray = [];
 
 // Unsplash API
@@ -10,7 +13,12 @@ let photosArray = [];
 
 // Check if all images were loaded
 function imageLoade() {
-  console.log('image loaded')
+  console.log('image loaded');
+  imagesLoaded++;
+  if(imagesLoaded === totalImages) {
+    console.log(imagesLoaded)
+  }
+
 }
 
 // Helper Function to Set Attributes on DOM Elements
