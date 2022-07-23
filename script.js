@@ -14,13 +14,15 @@ function displayPhotos() {
   photosArray.forEach((photo) => {
     // Create <a> to link to Unsplash
     const item = document.createElement('a');
-    item.setAttribute('href', photo.link.html)
-    item.setAttribute('target', '_blank')
+    item.setAttribute('href', photo.link.html);
+    item.setAttribute('target', '_blank');
     // Create <img> for photo
-    const img = document.createElement('img')
-    img.setAttribute('src', photo.urls.regular)
-    img.setAttribute('alt', photo.alt_description)
-    img.setAttribute('title', photo.alt_description)
+    const img = document.createElement('img');
+    img.setAttribute('src', photo.urls.regular);
+    img.setAttribute('alt', photo.alt_description);
+    img.setAttribute('title', photo.alt_description);
+    // Put <img> inside <a>, then put both inside imageContainer Element 
+    item.appendChild(img)
   })
 }
 
