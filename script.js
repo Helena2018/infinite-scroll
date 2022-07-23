@@ -16,6 +16,11 @@ function displayPhotos() {
     const item = document.createElement('a');
     item.setAttribute('href', photo.link.html)
     item.setAttribute('target', '_blank')
+    // Create <img> for photo
+    const img = document.createElement('img')
+    img.setAttribute('src', photo.urls.regular)
+    img.setAttribute('alt', photo.alt_description)
+    img.setAttribute('title', photo.alt_description)
   })
 }
 
@@ -24,6 +29,7 @@ async function getPhotos() {
   try {
     const response = await fetch(apiUrl);
     photosArray = response.json();
+    console.log(photosArray)
     displayPhotos();
   } catch(error) {
     // Catch Error Here
