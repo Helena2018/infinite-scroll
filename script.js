@@ -16,6 +16,7 @@ function imageLoade() {
   console.log('image loaded');
   imagesLoaded++;
   if(imagesLoaded === totalImages) {
+    ready = true;
     console.log(imagesLoaded)
   }
 
@@ -30,6 +31,7 @@ function setAttributes(element, attributes) {
 
 // Create Elements For Links & Photos, Add to DOM
 function displayPhotos() {
+  totalImages = photosArray.length
   // Run function for each object in photosArray
   photosArray.forEach((photo) => {
     // Create <a> to link to Unsplash
