@@ -16,6 +16,7 @@ function imageLoade() {
   imagesLoaded++;
   if(imagesLoaded === totalImages) {
     ready = true;
+    loader.hidden = true;
   }
 
 }
